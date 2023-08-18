@@ -1,0 +1,171 @@
+couldn't open "transcript": permission denied
+# Reading C:/intelFPGA/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# Loading project Decrypt
+vsim -gui work.decrypt_tb
+# vsim -gui work.decrypt_tb 
+# Start time: 16:40:18 on Aug 30,2022
+# Loading sv_std.std
+# Loading work.decrypt_tb
+# Loading work.top_level
+# Loading work.DataMem
+# Loading work.Mux
+# Loading work.RegFile
+# Loading work.ALU
+# Loading work.InstFetch
+# Loading work.InstROM
+# Loading work.Ctrl
+# Loading work.Immediate_LUT
+# ** Warning: (vsim-3017) top_level.sv(106): [TFMPC] - Too few port connections. Expected 15, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_tb/dut/CTRL File: Ctrl.sv
+# ** Warning: (vsim-3722) top_level.sv(106): [TFMPC] - Missing connection for port 'TapSel'.
+# ** Warning: (vsim-3722) top_level.sv(106): [TFMPC] - Missing connection for port 'Ack'.
+# ** Warning: (vsim-3722) top_level.sv(106): [TFMPC] - Missing connection for port 'ImdVal'.
+# ** Warning: (vsim-3722) top_level.sv(106): [TFMPC] - Missing connection for port 'ALU_inst'.
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint  \
+sim:/decrypt_tb/dut/clk \
+sim:/decrypt_tb/dut/init \
+sim:/decrypt_tb/dut/req \
+sim:/decrypt_tb/dut/machineCode \
+sim:/decrypt_tb/dut/pctr
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: nfrie  Hostname: LAPTOP-DBVLIUM2  ProcessID: 20672
+#           Attempting to use alternate WLF file "./wlftzfi4jh".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftzfi4jh
+add wave -position insertpoint  \
+sim:/decrypt_tb/dut/RF/Registers
+add wave -position insertpoint  \
+sim:/decrypt_tb/dut/DM/core
+run -all
+# run encryption program; original message = 
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# LFSR_ptrn = 0x48, LFSR_init = 0x01
+# pt_no =           1
+# i=          0, msg_pad=0x20, lfsr=0000001 msg_crypt w/ parity = 0x01
+# i=          1, msg_pad=0x20, lfsr=0000010 msg_crypt w/ parity = 0x02
+# i=          2, msg_pad=0x20, lfsr=0000100 msg_crypt w/ parity = 0x04
+# i=          3, msg_pad=0x20, lfsr=0001000 msg_crypt w/ parity = 0x08
+# i=          4, msg_pad=0x20, lfsr=0010001 msg_crypt w/ parity = 0x11
+# i=          5, msg_pad=0x20, lfsr=0100010 msg_crypt w/ parity = 0x22
+# i=          6, msg_pad=0x20, lfsr=1000100 msg_crypt w/ parity = 0x44
+# i=          7, msg_pad=0x20, lfsr=0001001 msg_crypt w/ parity = 0x09
+# i=          8, msg_pad=0x20, lfsr=0010011 msg_crypt w/ parity = 0x13
+# i=          9, msg_pad=0x20, lfsr=0100110 msg_crypt w/ parity = 0x26
+# i=         10, msg_pad=0x40, lfsr=1001100 msg_crypt w/ parity = 0x6c
+# i=         11, msg_pad=0x40, lfsr=0011000 msg_crypt w/ parity = 0x38
+# i=         12, msg_pad=0x40, lfsr=0110001 msg_crypt w/ parity = 0x11
+# i=         13, msg_pad=0x40, lfsr=1100010 msg_crypt w/ parity = 0x42
+# i=         14, msg_pad=0x40, lfsr=1000101 msg_crypt w/ parity = 0x65
+# i=         15, msg_pad=0x40, lfsr=0001011 msg_crypt w/ parity = 0x2b
+# i=         16, msg_pad=0x40, lfsr=0010111 msg_crypt w/ parity = 0x37
+# i=         17, msg_pad=0x40, lfsr=0101110 msg_crypt w/ parity = 0x0e
+# i=         18, msg_pad=0x40, lfsr=1011101 msg_crypt w/ parity = 0x7d
+# i=         19, msg_pad=0x40, lfsr=0111010 msg_crypt w/ parity = 0x1a
+# i=         20, msg_pad=0x40, lfsr=1110101 msg_crypt w/ parity = 0x55
+# i=         21, msg_pad=0x40, lfsr=1101011 msg_crypt w/ parity = 0x4b
+# i=         22, msg_pad=0x40, lfsr=1010110 msg_crypt w/ parity = 0x76
+# i=         23, msg_pad=0x40, lfsr=0101101 msg_crypt w/ parity = 0x0d
+# i=         24, msg_pad=0x40, lfsr=1011011 msg_crypt w/ parity = 0x7b
+# i=         25, msg_pad=0x40, lfsr=0110110 msg_crypt w/ parity = 0x16
+# i=         26, msg_pad=0x40, lfsr=1101100 msg_crypt w/ parity = 0x4c
+# i=         27, msg_pad=0x40, lfsr=1011000 msg_crypt w/ parity = 0x78
+# i=         28, msg_pad=0x40, lfsr=0110000 msg_crypt w/ parity = 0x10
+# i=         29, msg_pad=0x40, lfsr=1100000 msg_crypt w/ parity = 0x40
+# i=         30, msg_pad=0x40, lfsr=1000001 msg_crypt w/ parity = 0x61
+# i=         31, msg_pad=0x40, lfsr=0000011 msg_crypt w/ parity = 0x23
+# i=         32, msg_pad=0x40, lfsr=0000110 msg_crypt w/ parity = 0x26
+# i=         33, msg_pad=0x40, lfsr=0001100 msg_crypt w/ parity = 0x2c
+# i=         34, msg_pad=0x40, lfsr=0011001 msg_crypt w/ parity = 0x39
+# i=         35, msg_pad=0x40, lfsr=0110011 msg_crypt w/ parity = 0x13
+# i=         36, msg_pad=0x40, lfsr=1100110 msg_crypt w/ parity = 0x46
+# i=         37, msg_pad=0x40, lfsr=1001101 msg_crypt w/ parity = 0x6d
+# i=         38, msg_pad=0x40, lfsr=0011010 msg_crypt w/ parity = 0x3a
+# i=         39, msg_pad=0x40, lfsr=0110101 msg_crypt w/ parity = 0x15
+# i=         40, msg_pad=0x40, lfsr=1101010 msg_crypt w/ parity = 0x4a
+# i=         41, msg_pad=0x40, lfsr=1010100 msg_crypt w/ parity = 0x74
+# i=         42, msg_pad=0x40, lfsr=0101001 msg_crypt w/ parity = 0x09
+# i=         43, msg_pad=0x40, lfsr=1010011 msg_crypt w/ parity = 0x73
+# i=         44, msg_pad=0x40, lfsr=0100111 msg_crypt w/ parity = 0x07
+# i=         45, msg_pad=0x20, lfsr=1001110 msg_crypt w/ parity = 0x4e
+# i=         46, msg_pad=0x20, lfsr=0011100 msg_crypt w/ parity = 0x1c
+# i=         47, msg_pad=0x20, lfsr=0111001 msg_crypt w/ parity = 0x39
+# i=         48, msg_pad=0x20, lfsr=1110011 msg_crypt w/ parity = 0x73
+# i=         49, msg_pad=0x20, lfsr=1100111 msg_crypt w/ parity = 0x67
+# i=         50, msg_pad=0x20, lfsr=1001111 msg_crypt w/ parity = 0x4f
+# i=         51, msg_pad=0x20, lfsr=0011110 msg_crypt w/ parity = 0x1e
+# i=         52, msg_pad=0x20, lfsr=0111101 msg_crypt w/ parity = 0x3d
+# i=         53, msg_pad=0x20, lfsr=1111011 msg_crypt w/ parity = 0x7b
+# i=         54, msg_pad=0x20, lfsr=1110110 msg_crypt w/ parity = 0x76
+# i=         55, msg_pad=0x20, lfsr=1101101 msg_crypt w/ parity = 0x6d
+# i=         56, msg_pad=0x20, lfsr=1011010 msg_crypt w/ parity = 0x5a
+# i=         57, msg_pad=0x20, lfsr=0110100 msg_crypt w/ parity = 0x34
+# i=         58, msg_pad=0x20, lfsr=1101000 msg_crypt w/ parity = 0x68
+# i=         59, msg_pad=0x20, lfsr=1010000 msg_crypt w/ parity = 0x50
+# i=         60, msg_pad=0x20, lfsr=0100001 msg_crypt w/ parity = 0x21
+# i=         61, msg_pad=0x20, lfsr=1000010 msg_crypt w/ parity = 0x42
+# i=         62, msg_pad=0x20, lfsr=0000101 msg_crypt w/ parity = 0x05
+# i=         63, msg_pad=0x20, lfsr=0001010 msg_crypt w/ parity = 0x0a
+# encrypted string =  
+# !"$(1Bd)3FåX1bÖKW.ù:ukñ-õ6lò0`ÅCFLY3fçZ5jî)ì'n<Yìáo>]õñçzTàpAb%*
+# 
+# 
+# program 2:
+#          10 bench msg: @ 40 dut msg: 20
+#          11 bench msg: @ 40 dut msg: 20
+#          12 bench msg: @ 40 dut msg: 20
+#          13 bench msg: @ 40 dut msg: 20
+#          14 bench msg: @ 40 dut msg: 20
+#          15 bench msg: @ 40 dut msg: 20
+#          16 bench msg: @ 40 dut msg: 20
+#          17 bench msg: @ 40 dut msg: 20
+#          18 bench msg: @ 40 dut msg: 20
+#          19 bench msg: @ 40 dut msg: 20
+#          20 bench msg: @ 40 dut msg: 20
+#          21 bench msg: @ 40 dut msg: 20
+#          22 bench msg: @ 40 dut msg: 20
+#          23 bench msg: @ 40 dut msg: 20
+#          24 bench msg: @ 40 dut msg: 20
+#          25 bench msg: @ 40 dut msg: 20
+#          26 bench msg: @ 40 dut msg: 20
+#          27 bench msg: @ 40 dut msg: 20
+#          28 bench msg: @ 40 dut msg: 20
+#          29 bench msg: @ 40 dut msg: 20
+#          30 bench msg: @ 40 dut msg: 20
+#          31 bench msg: @ 40 dut msg: 20
+#          32 bench msg: @ 40 dut msg: 20
+#          33 bench msg: @ 40 dut msg: 20
+#          34 bench msg: @ 40 dut msg: 20
+#          35 bench msg: @ 40 dut msg: 20
+#          36 bench msg: @ 40 dut msg: 20
+#          37 bench msg: @ 40 dut msg: 20
+#          38 bench msg: @ 40 dut msg: 20
+#          39 bench msg: @ 40 dut msg: 20
+#          40 bench msg: @ 40 dut msg: 20
+#          41 bench msg: @ 40 dut msg: 20
+#          42 bench msg: @ 40 dut msg: 20
+#          43 bench msg: @ 40 dut msg: 20
+#          44 bench msg: @ 40 dut msg: 20
+#          45 bench msg:   20 dut msg: 00
+#          46 bench msg:   20 dut msg: 00
+#          47 bench msg:   20 dut msg: 00
+#          48 bench msg:   20 dut msg: 00
+#          49 bench msg:   20 dut msg: 00
+#          50 bench msg:   20 dut msg: 00
+#          51 bench msg:   20 dut msg: 00
+#          52 bench msg:   20 dut msg: 00
+#          53 bench msg:   20 dut msg: 00
+#          54 bench msg:   20 dut msg: 00
+#          55 bench msg:   20 dut msg: 00
+#          56 bench msg:   20 dut msg: 00
+#          57 bench msg:   20 dut msg: 00
+#          58 bench msg:   20 dut msg: 00
+#          59 bench msg:   20 dut msg: 00
+#          60 bench msg:   20 dut msg: 00
+#          61 bench msg:   20 dut msg: 00
+#          62 bench msg:   20 dut msg: 00
+#          63 bench msg:   20 dut msg: 00
+# score =          54/54
+# ** Note: $stop    : program2_tb.sv(148)
+#    Time: 19295 ns  Iteration: 0  Instance: /decrypt_tb
+# Break in Module decrypt_tb at program2_tb.sv line 148
